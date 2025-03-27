@@ -1,38 +1,116 @@
-.App {
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #222;
+}
+
+a {
+  color: #d6d7ed;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #4c4cff;
+}
+
+header {
+  background: linear-gradient(135deg, #646cff, #4c4cff);
+  color: white;
+  padding: 3rem 1rem;
   text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tagline {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #e0e4ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Section Styles */
+section {
+  padding: 2.5rem 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.light-bg {
+  background-color: #f9f9f9;
+}
+
+.dark-bg {
+  background-color: #646cff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Cards */
+.experience-card, .project-card {
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-left: 6px solid #4c4cff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dark-bg .experience-card, .dark-bg .project-card {
+  background-color: #444;
+  color: white;
+}
+
+.project-card:hover, .experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* LinkedIn Badge */
+.LI-profile-badge {
+  margin: 1rem auto;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding: 2rem 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .experience-card, .project-card {
+    width: 90%;
+    padding: 1rem;
   }
 }
